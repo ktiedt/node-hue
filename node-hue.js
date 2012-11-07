@@ -33,7 +33,7 @@ exports.registerApp = function(hueHostname, username, devicetype, fn) {
     }
 };
 
-exports.getHupStatus = function(hueHostname, key, fn) {
+exports.getHubState = function(hueHostname, key, fn) {
   var requestOptions = {
     "method": "GET",
     "url": "http://" + hueHostname + "/api/" + key,
@@ -56,7 +56,7 @@ exports.getHupStatus = function(hueHostname, key, fn) {
   });
 };
 
-exports.getLightStatus = function(hueHostname, key, lightNumber, fn) {
+exports.getLightState = function(hueHostname, key, lightNumber, fn) {
   var requestOptions = {
     "method": "GET",
     "url": "http://" + hueHostname + "/api/" + key + "/lights/" + lightNumber,

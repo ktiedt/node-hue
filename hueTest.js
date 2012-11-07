@@ -1,7 +1,7 @@
 var util = require("util");
 var hue = require("./node-hue");
 
-hue.registerApp("hue", "nodeAppWeNeedToFillThis", "nodeApp", function(error, responseJson) {
+hue.registerApp("172.30.20.7", "nodeAppWeNeedToFillThis", "nodeApp", function(error, responseJson) {
     if(error !== null) {
         console.log(error);
     }
@@ -10,7 +10,7 @@ hue.registerApp("hue", "nodeAppWeNeedToFillThis", "nodeApp", function(error, res
     }
 });
 
-hue.getHupStatus("hue", "nodeAppWeNeedToFillThis", function(error, responseJson) {
+hue.getHubState("172.30.20.7", "nodeAppWeNeedToFillThis", function(error, responseJson) {
     if(error !== null) {
         console.log(error);
     }
@@ -19,7 +19,7 @@ hue.getHupStatus("hue", "nodeAppWeNeedToFillThis", function(error, responseJson)
     }
 });
 
-hue.getLightStatus("hue", "nodeAppWeNeedToFillThis", 1, function(error, responseJson) {
+hue.getLightState("172.30.20.7", "nodeAppWeNeedToFillThis", 1, function(error, responseJson) {
     if(error !== null) {
         console.log(error);
     }
@@ -28,7 +28,7 @@ hue.getLightStatus("hue", "nodeAppWeNeedToFillThis", 1, function(error, response
     }
 });
 
-hue.powerOffLight("hue", "nodeAppWeNeedToFillThis", 1, function(error, responseJson) {
+hue.powerOffLight("172.30.20.7", "nodeAppWeNeedToFillThis", 1, function(error, responseJson) {
     if(error !== null) {
         console.log(error);
     }
@@ -37,7 +37,7 @@ hue.powerOffLight("hue", "nodeAppWeNeedToFillThis", 1, function(error, responseJ
     }
 });
 
-hue.powerOnLight("hue", "nodeAppWeNeedToFillThis", 1, function(error, responseJson) {
+hue.powerOnLight("172.30.20.7", "nodeAppWeNeedToFillThis", 1, function(error, responseJson) {
     if(error !== null) {
         console.log(error);
     }
@@ -46,7 +46,7 @@ hue.powerOnLight("hue", "nodeAppWeNeedToFillThis", 1, function(error, responseJs
     }
 });
 
-hue.flashLightOnce("hue", "nodeAppWeNeedToFillThis", 1, function(error, responseJson) {
+hue.flashLightOnce("172.30.20.7", "nodeAppWeNeedToFillThis", 1, function(error, responseJson) {
     if(error !== null) {
         console.log(error);
     }
@@ -55,7 +55,7 @@ hue.flashLightOnce("hue", "nodeAppWeNeedToFillThis", 1, function(error, response
     }
 });
 
-hue.flashLight("hue", "nodeAppWeNeedToFillThis", 2, function(error, responseJson) {
+hue.flashLight("172.30.20.7", "nodeAppWeNeedToFillThis", 1, function(error, responseJson) {
     if(error !== null) {
         console.log(error);
     }
