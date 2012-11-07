@@ -1,0 +1,8 @@
+{
+  "name": "node-hue",
+  "dependencies": {
+    "request": ">=2.11.4"
+  },
+  "main": "node-hue.js",
+  "version": "0.0.1"
+}
