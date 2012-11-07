@@ -10,7 +10,7 @@ company: 'newscope GmbH (dev@newscope.com)'
 website: (http://www.newscope.com/ "http://www.newscope.com/")
 version: '0.0.1 alpha'
 date: '07/11/2012'
-<pre>
+</pre>
 
 ### What is Phillips hue
 
