@@ -1,7 +1,7 @@
 var util = require("util");
 var hue = require("./node-hue");
 
-hue.registerApp("172.30.20.7", "nodeAppWeNeedToFillThis", "nodeApp", function(error, responseJson) {
+hue.registerApp("yourHueHostname", "YourAppName", "YourAppName", function(error, responseJson) {
     if(error !== null) {
         console.log(error);
     }
@@ -10,7 +10,9 @@ hue.registerApp("172.30.20.7", "nodeAppWeNeedToFillThis", "nodeApp", function(er
     }
 });
 
-hue.getHubState("172.30.20.7", "nodeAppWeNeedToFillThis", function(error, responseJson) {
+// To get your key for hue you first need to call "registerApp" with you data 
+
+hue.getHubState("yourHueHostname", "yourHueKey", function(error, responseJson) {
     if(error !== null) {
         console.log(error);
     }
@@ -19,7 +21,7 @@ hue.getHubState("172.30.20.7", "nodeAppWeNeedToFillThis", function(error, respon
     }
 });
 
-hue.getLightState("172.30.20.7", "nodeAppWeNeedToFillThis", 1, function(error, responseJson) {
+hue.getLightState("yourHueHostname", "yourHueKey", 1, function(error, responseJson) {
     if(error !== null) {
         console.log(error);
     }
@@ -28,7 +30,7 @@ hue.getLightState("172.30.20.7", "nodeAppWeNeedToFillThis", 1, function(error, r
     }
 });
 
-hue.powerOffLight("172.30.20.7", "nodeAppWeNeedToFillThis", 1, function(error, responseJson) {
+hue.powerOffLight("yourHueHostname", "yourHueKey", 1, function(error, responseJson) {
     if(error !== null) {
         console.log(error);
     }
@@ -37,7 +39,7 @@ hue.powerOffLight("172.30.20.7", "nodeAppWeNeedToFillThis", 1, function(error, r
     }
 });
 
-hue.powerOnLight("172.30.20.7", "nodeAppWeNeedToFillThis", 1, function(error, responseJson) {
+hue.powerOnLight("yourHueHostname", "yourHueKey", 1, function(error, responseJson) {
     if(error !== null) {
         console.log(error);
     }
@@ -46,7 +48,7 @@ hue.powerOnLight("172.30.20.7", "nodeAppWeNeedToFillThis", 1, function(error, re
     }
 });
 
-hue.flashLightOnce("172.30.20.7", "nodeAppWeNeedToFillThis", 1, function(error, responseJson) {
+hue.flashLightOnce("yourHueHostname", "yourHueKey", 1, function(error, responseJson) {
     if(error !== null) {
         console.log(error);
     }
@@ -55,11 +57,78 @@ hue.flashLightOnce("172.30.20.7", "nodeAppWeNeedToFillThis", 1, function(error, 
     }
 });
 
-hue.flashLight("172.30.20.7", "nodeAppWeNeedToFillThis", 1, function(error, responseJson) {
+hue.flashLight("yourHueHostname", "yourHueKey", 1, function(error, responseJson) {
     if(error !== null) {
         console.log(error);
     }
     else {
         console.log(util.inspect(responseJson, false, null, true));
+    }
+});
+
+hue.setLightColorTemperature("yourHueHostname", "yourHueKey", 1, 500, function(error, responseJson) {
+    if(error !== null) {
+        console.log(error);
+    }
+    else {
+        console.log(util.inspect(responseJson, false, null, true));
+    }
+});
+
+hue.setLightBrightness("yourHueHostname", "yourHueKey", 1, 254, function(error, responseJson) {
+    if(error !== null) {
+        console.log(error);
+    }
+    else {
+        console.log(util.inspect(responseJson, false, null, true));
+    }
+});
+
+hue.setLightHue("yourHueHostname", "yourHueKey", 1, 35000, function(error, responseJson) {
+    if(error !== null) {
+        console.log(error);
+    }
+    else {
+        console.log(util.inspect(responseJson, false, null, true));
+    }
+});
+
+
+hue.setLightSaturation("yourHueHostname", "yourHueKey", 1, 254, function(error, responseJson) {
+    if(error !== null) {
+        console.log(error);
+    }
+    else {
+        console.log(util.inspect(responseJson, false, null, true));
+    }
+});
+
+hue.setLightXy("yourHueHostname", "yourHueKey", 2, [0.4, 0.4], function(error, responseJson) {
+    if(error !== null) {
+        console.log(error);
+    }
+    else {
+        console.log(util.inspect(responseJson, false, null, true));
+    }
+});
+
+hue.fadeLight("yourHueHostname", "yourHueKey", 1, 65535, 0, 5000, 500, function(error) {
+    if(error !== null && typeof error !== "undefined") {
+        console.log(error);
+    }
+});
+
+hue.discoFadeLight("yourHueHostname", "yourHueKey", 1, 5000, 100, 0, 2, 100, 300000, function(error) {
+    if(error !== null && typeof error !== "undefined") {
+        console.log(error);
+    }
+});
+
+hue.setLightRawObject("yourHueHostname", "yourHueKey", 1, {"hue": 15331, "sat": 121, "alert": "lselect"}, function(error, responseJson) {
+    if(error !== null) {
+        console.log(error);
+    }
+    else {
+        console.log(responseJson);
     }
 });

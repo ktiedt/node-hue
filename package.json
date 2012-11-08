@@ -1,7 +1,8 @@
 {
   "name": "node-hue",
   "dependencies": {
-    "request": ">=2.11.4"
+    "request": ">=2.11.4",
+    "async": ">=0.1.22"
   },
   "main": "node-hue.js",
   "version": "0.0.1"
