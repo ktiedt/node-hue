@@ -9,11 +9,11 @@ Philips hue is a LED lamp with a network hub which is controlled over the http p
 # Information about this module
 
 <pre>
-authors: 'Michel Bonkowski (mb@newscope.com) and Katharina Wittkowsky (kw@newscope.com)
-company: 'newscope GmbH (dev@newscope.com)
+authors: Michel Bonkowski (mb@newscope.com) and Katharina Wittkowsky (kw@newscope.com)
+company: newscope GmbH (dev@newscope.com)
 website: <a href="http://www.newscope.com/">http://www.newscope.com/</a>
-version: '0.0.2 alpha'
-date: '08/11/2012'
+version: 0.0.2 alpha
+date: 08/11/2012
 </pre>
 
 
@@ -24,6 +24,10 @@ node-hue is a node module to access your hue hub and its bulbs with your node.js
 ## Thanks 
 
 Thanks to Ross McKillop ([http://rsmck.co.uk/hue/](http://rsmck.co.uk/hue/)) for providing information about Phillips hue protocol. And also thanks to the authors of [async](https://github.com/caolan/async) and [request](https://github.com/caolan/async) which have been used in this node module.
+
+## LICENSE
+
+This module is MIT licensed. Please see LICENSE file for details.
 
 ## Disclaimer
 
